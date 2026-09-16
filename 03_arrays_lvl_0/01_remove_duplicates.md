@@ -28,7 +28,8 @@ Example 2:
 
 1. **Initialize Pointer:**
 
-   - Set a pointer `x = 0` to keep track of the position of the last unique element.
+   - If the array is empty, return `0`.
+   - Otherwise set a pointer `x = 0` to keep track of the position of the last unique element.
 
 2. **Loop through the array from index 1:**
 
@@ -53,6 +54,8 @@ Example 2:
 
 ```javascript
 function removeDuplicates(nums) {
+  if (nums.length === 0) return 0;
+
   // Initialize a pointer to track the position of the last unique element
   let x = 0;
 
@@ -75,6 +78,7 @@ function removeDuplicates(nums) {
 ```javascript
 console.log(removeDuplicates([1, 1, 2])); // Output: 2
 console.log(removeDuplicates([0, 0, 1, 1, 1, 2, 2, 3, 3, 4])); // Output: 5
+console.log(removeDuplicates([])); // Output: 0
 ```
 
 ## Note:

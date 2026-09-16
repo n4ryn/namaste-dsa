@@ -3,7 +3,7 @@
  * ============================ */
 
 // Helper function to merge two sorted arrays
-function merge(left: number[], right: number[]): number[] {
+function mergeSortedHalves(left: number[], right: number[]): number[] {
   // Initialize the result array, i and j pointers
   const result: number[] = [];
   let i: number = 0;
@@ -36,7 +36,7 @@ function mergeSort(arr: number[]): number[] {
   const right: number[] = mergeSort(arr.slice(mid));
 
   // Merge the two sorted halves
-  return merge(left, right);
+  return mergeSortedHalves(left, right);
 }
 
 console.log(mergeSort([8, 4, 5, 6, 9, 1, 3, 6])); // Output: [1, 3, 4, 5, 6, 6, 8, 9]

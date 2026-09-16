@@ -6,8 +6,8 @@ function reverseInteger(x: number): number {
   const isNegative: boolean = x < 0;
   x = Math.abs(x);
 
-  // 2^31 is the largest integer that can be stored in a 32-bit signed integer
-  let limit: number = Math.pow(2, 31);
+  const maxInt32: number = 2 ** 31 - 1;
+  const minInt32: number = -(2 ** 31);
 
   let reverse: number = 0;
 
@@ -18,13 +18,14 @@ function reverseInteger(x: number): number {
     x = Math.floor(x / 10);
   }
 
-  // Check for overflow
-  if (reverse < -limit || reverse > limit) {
+  const result: number = isNegative ? -reverse : reverse;
+
+  // Return 0 when the signed 32-bit result would overflow.
+  if (result < minInt32 || result > maxInt32) {
     return 0;
   }
 
-  // Return negative if original was negative
-  return isNegative ? -reverse : reverse;
+  return result;
 }
 
 // Test cases

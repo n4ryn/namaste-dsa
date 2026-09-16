@@ -23,4 +23,4 @@ function binarySearch(nums: number[], target: number): number {
 
 // Test Cases
 console.log(binarySearch([2, 4, 7, 10], 10)); // 3
-console.log(binarySearch([6, 8, 0, 3], 5)); // -1
+console.log(binarySearch([0, 3, 6, 8], 5)); // -1

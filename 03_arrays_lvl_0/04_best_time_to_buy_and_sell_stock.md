@@ -25,7 +25,8 @@ Example 2:
 
 1. **Initialize `minPrice`:**
 
-   - Set `minPrice = prices[0]` — assume the first day’s price is the lowest so far.
+   - Return `0` for an empty price list.
+   - Otherwise set `minPrice = prices[0]` — assume the first day’s price is the lowest so far.
 
 2. **Initialize `maxProfit`:**
 
@@ -54,6 +55,8 @@ Example 2:
 
 ```javascript
 function maxProfit(prices) {
+  if (prices.length === 0) return 0;
+
   // Initialize the minimum price to the first day's price
   let minPrice = prices[0];
 

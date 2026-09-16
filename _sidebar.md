@@ -16,7 +16,6 @@
 - [Time & Space Complexity]("02_time_&_space_complexity/")
 
   - [01. Time Complexity](02_time_&_space_complexity/01_time_complexity.md)
-  - [02. Space Complexity](02_time_&_space_complexity/02_space_complexity.md)
 
 - [Arrays (Level 0)]("03_arrays_lvl_0/")
 
@@ -25,6 +24,10 @@
   - [03. Reverse String](03_arrays_lvl_0/03_reverse_string.md)
   - [04. Best Time to Buy and Sell Stock](03_arrays_lvl_0/04_best_time_to_buy_and_sell_stock.md)
   - [05. Merge Sorted Array](03_arrays_lvl_0/05_merge_sorted_array.md)
+  - [06. Move Zeroes](03_arrays_lvl_0/06_move_zeroes.md)
+  - [07. Max Consecutive Ones](03_arrays_lvl_0/07_max_consecutive_ones.md)
+  - [08. Missing Number](03_arrays_lvl_0/08_missing_number.md)
+  - [09. Single Number](03_arrays_lvl_0/09_single_number.md)
 
 - [Recursion]("04_recursion/")
 
@@ -38,3 +41,12 @@
 - [Searching & Sorting (Level 0)]("05_searching_&_sorting_lvl_0/")
 
   - [01. Linear Search](05_searching_&_sorting_lvl_0/01_linear_search.md)
+  - [02. Binary Search](05_searching_&_sorting_lvl_0/02_binary_search.md)
+  - [03. Bubble Sort](05_searching_&_sorting_lvl_0/03_bubble_sort.md)
+  - [04. Selection Sort](05_searching_&_sorting_lvl_0/04_selection_sort.md)
+  - [05. Insertion Sort](05_searching_&_sorting_lvl_0/05_insertion_sort.md)
+  - [06. Merge Sort](05_searching_&_sorting_lvl_0/06_merge_sort.md)
+
+- [Linked List]("06_linked_list/")
+
+  - [01. Intro to Linked List](06_linked_list/01_intro_to_linked_list.md)

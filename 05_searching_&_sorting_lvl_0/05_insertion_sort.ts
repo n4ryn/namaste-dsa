@@ -10,7 +10,7 @@ function insertionSort(arr: number[]): number[] {
     let prev = i - 1;
 
     // Iterate the array until the current element is less than the previous element
-    while (arr[prev] > curr && prev >= 0) {
+    while (prev >= 0 && arr[prev] > curr) {
       // Swap the current element with the previous element and decrement the previous element's index
       arr[prev + 1] = arr[prev];
       prev--;

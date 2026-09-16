@@ -2,7 +2,7 @@
 
 ## Problem Statement:
 
-### Write a recursive function `sum(arr, n)` that calculates the sum of the first `n` elements of an array `arr`.
+### Write a recursive function `sumElements(arr, n)` that calculates the sum of the first `n` elements of an array `arr`.
 
 Example 1:
 
@@ -18,11 +18,11 @@ Example 2:
 
 1. **Base Case:**
 
-   - If `n === 1`, return `arr[0]` — the sum of a single-element array is the element itself.
+   - If `n <= 0`, return `0`. This also makes an empty array valid when `n` is `0`.
 
 2. **Recursive Case:**
 
-   - If `n > 1`, return `arr[n - 1] + sum(arr, n - 1)`:
+   - If `n > 0`, return `arr[n - 1] + sumElements(arr, n - 1)`:
 
      - This adds the last element (`arr[n - 1]`) to the sum of the first `n - 1` elements recursively.
 
@@ -35,18 +35,19 @@ Example 2:
 ## Logic Breakdown:
 
 ```javascript
-function sum(arr, n) {
+function sumElements(arr, n) {
   // Base Case
-  if (n === 1) return arr[0];
+  if (n <= 0) return 0;
 
   // Recursive Case
-  return arr[n - 1] + sum(arr, n - 1);
+  return arr[n - 1] + sumElements(arr, n - 1);
 }
 ```
 
 ## Test Cases:
 
 ```javascript
-console.log(sum([1, 2, 3], 3)); // Output: 6
-console.log(sum([1, 3, 4, 23, 5, 2], 6)); // Output: 38
+console.log(sumElements([1, 2, 3], 3)); // Output: 6
+console.log(sumElements([1, 3, 4, 23, 5, 2], 6)); // Output: 38
+console.log(sumElements([], 0)); // Output: 0
 ```
