@@ -2,7 +2,7 @@
  *  Strings in JavaScript
  *  Strings are enclosed in single or double quotes
  * ============================ */
-console.log("Hello World");
+console.log('Hello World');
 console.log("Hello Again");
 
 /** ============================
