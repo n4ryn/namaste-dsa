@@ -2,7 +2,7 @@
 
 ## Problem Statement:
 
-### Write a recursive function `factorial(n)` that returns the factorial of a given positive integer `n`.
+### Write a recursive function `factorial(n)` that returns the factorial of a given non-negative integer `n`.
 
 > The factorial of a number `n` is defined as:
 
@@ -34,7 +34,7 @@ Example 2:
 
 1. **Base Case:**
 
-   - If `n === 1`, return `1` (since the factorial of 1 is 1).
+   - If `n` is `0` or `1`, return `1`.
 
 2. **Recursive Case:**
 
@@ -51,8 +51,10 @@ Example 2:
 
 ```javascript
 function factorial(n) {
-  // Base Case
-  if (n === 1) return 1;
+  if (n < 0 || !Number.isInteger(n)) {
+    throw new RangeError("factorial expects a non-negative integer");
+  }
+  if (n <= 1) return 1;
 
   // Recursive Case
   return n * factorial(n - 1);
@@ -64,4 +66,5 @@ function factorial(n) {
 ```javascript
 console.log(factorial(5)); // Output: 120
 console.log(factorial(10)); // Output: 3628800
+console.log(factorial(0)); // Output: 1
 ```
